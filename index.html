@@ -1,5 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JobNomad - Global Freelance Marketplace | Find Jobs & Hire Talent</title>
+      <meta name="description" content="JobNomad is the leading global marketplace connecting freelancers with businesses worldwide. Find your perfect job or hire top talent for your projects.">
+      <meta name="keywords" content="freelance jobs, remote work, hire freelancers, global marketplace, digital nomads, online work, jobnomad">
+      <meta name="author" content="JobNomad">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Open Graph Meta Tags -->
+      <meta property="og:title" content="JobNomad - Global Freelance Marketplace">
+      <meta property="og:description" content="Connect with top freelancers and clients worldwide. Your gateway to global opportunities.">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://scriptpulseai-oss.github.io/professional-business-website/">
+      
+      <style>
+                * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                }
+                
+                body {
+                              font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+                              line-height: 1.6;
+                              color: #333;
+                              background: #fff;
+                }
+                
+                .container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 0 20px;
+                }
+                
+                /* Header Styles */
+                header {
+                              background: rgba(255, 255, 255, 0.95);
+                              backdrop-filter: blur(10px);
+                              box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+                              position: fixed;
+                              width: 100%;
+                              top: 0;
+                              z-index: 1000;
+                              padding: 1rem 0;
+                }
+                
+                nav {
+                              display: flex;
+                              justify-content: space-between;
+                              align-items: center;
+                }
+                
+                .logo {
+                              font-size: 1.8rem;
+                              font-weight: 800;
+                              color: #667eea;
+                              text-decoration: none;
+                }
+                
+                .nav-menu {
+                              display: flex;
+                              list-style: none;
+                              gap: 2rem;
+                }
+                
+                .nav-menu a {
+                              text-decoration: none;
+                              color: #333;
+                              font-weight: 500;
+                              transition: color 0.3s ease;
+                }
+                
+                .nav-menu a:hover {
+                              color: #667eea;
+                }
+                
+                .cta-button {
+                              background: linear-gradient(135deg, #667eea, #764ba2);
+                              color: white;
+                              padding: 12px 24px;
+                              border: none;
+                              border-radius: 50px;
+                              font-weight: 600;
+                              text-decoration: none;
+                              transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                
+                .cta-button:hover {
+                              transform: translateY(-2px);
+                              box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+                }
+                
+                /* Hero Section */
+                .hero {
+                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              padding: 120px 0 80px;
+                              text-align: center;
+                              color: white;
+                              min-height: 100vh;
+                              display: flex;
+                              align-items: center;
+                }
+                
+                .hero h1 {
+                              font-size: 3.5rem;
+                              font-weight: 800;
+                              margin-bottom: 1.5rem;
+                              line-height: 1.2;
+                }
+                
+                .hero p {
+                              font-size: 1.25rem;
+                              margin-bottom: 2rem;
+                              opacity: 0.9;
+                              max-width: 600px;
+                              margin-left: auto;
+                              margin-right: auto;
+                }
+                
+                .hero-buttons {
+                              display: flex;
+                              gap: 1rem;
+                              justify-content: center;
+                              flex-wrap: wrap;
+                }
+                
+                .btn-primary {
+                              background: white;
+                              color: #667eea;
+                              padding: 15px 30px;
+                              border: none;
+                              border-radius: 50px;
+                              font-weight: 600;
+                              text-decoration: none;
+                              transition: all 0.3s ease;
+                }
+                
+                .btn-secondary {
+                              background: rgba(255, 255, 255, 0.2);
+                              color: white;
+                              padding: 15px 30px;
+                              border: 2px solid white;
+                              border-radius: 50px;
+                              font-weight: 600;
+                              text-decoration: none;
+                              transition: all 0.3s ease;
+                }
+                
+                .btn-primary:hover, .btn-secondary:hover {
+                              transform: translateY(-2px);
+                              box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                }
+                
+                /* Services Section */
+                .services {
+                              padding: 80px 0;
+                              background: white;
+                }
+                
+                .section-title {
+                              text-align: center;
+                              font-size: 2.5rem;
+                              font-weight: 700;
+                              margin-bottom: 3rem;
+                              color: #333;
+                }
+                
+                .services-grid {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                              gap: 2rem;
+                              margin-top: 3rem;
+                }
+                
+                .service-card {
+                              background: white;
+                              padding: 2.5rem;
+                              border-radius: 15px;
+                              box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+                              text-align: center;
+                              transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                
+                .service-card:hover {
+                              transform: translateY(-10px);
+                              box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+                }
+                
+                .service-icon {
+                              font-size: 3rem;
+                              margin-bottom: 1rem;
+                }
+                
+                .service-card h3 {
+                              font-size: 1.5rem;
+                              font-weight: 600;
+                              margin-bottom: 1rem;
+                              color: #333;
+                }
+                
+                .service-card p {
+                              color: #666;
+                              line-height: 1.6;
+                }
+                
+                /* About Section */
+                .about {
+                              padding: 80px 0;
+                              background: #f8f9fa;
+                }
+                
+                .about-content {
+                              display: grid;
+                              grid-template-columns: 1fr 1fr;
+                              gap: 4rem;
+                              align-items: center;
+                }
+                
+                .about-text h2 {
+                              font-size: 2.5rem;
+                              font-weight: 700;
+                              margin-bottom: 1.5rem;
+                              color: #333;
+                }
+                
+                .about-text p {
+                              font-size: 1.1rem;
+                              color: #666;
+                              margin-bottom: 1.5rem;
+                              line-height: 1.7;
+                }
+                
+                .features-list {
+                              list-style: none;
+                              margin-top: 2rem;
+                }
+                
+                .features-list li {
+                              padding: 0.5rem 0;
+                              color: #333;
+                              font-weight: 500;
+                }
+                
+                .features-list li:before {
+                              content: "✓";
+                              color: #667eea;
+                              font-weight: bold;
+                              margin-right: 0.5rem;
+                }
+                
+                /* Contact Section */
+                .contact {
+                              padding: 80px 0;
+                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              color: white;
+                              text-align: center;
+                }
+                
+                .contact h2 {
+                              font-size: 2.5rem;
+                              font-weight: 700;
+                              margin-bottom: 2rem;
+                }
+                
+                .contact p {
+                              font-size: 1.25rem;
+                              margin-bottom: 2rem;
+                              opacity: 0.9;
+                }
+                
+                /* Footer */
+                footer {
+                              background: #333;
+                              color: white;
+                              padding: 3rem 0 1rem;
+                }
+                
+                .footer-content {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                              gap: 2rem;
+                              margin-bottom: 2rem;
+                }
+                
+                .footer-section h3 {
+                              font-size: 1.2rem;
+                              font-weight: 600;
+                              margin-bottom: 1rem;
+                              color: #667eea;
+                }
+                
+                .footer-section a {
+                              color: #ccc;
+                              text-decoration: none;
+                              display: block;
+                              margin: 0.5rem 0;
+                              transition: color 0.3s ease;
+                }
+                
+                .footer-section a:hover {
+                              color: #667eea;
+                }
+                
+                .footer-bottom {
+                              border-top: 1px solid #555;
+                              padding-top: 1rem;
+                              text-align: center;
+                              color: #ccc;
+                }
+                
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                              .nav-menu {
+                                                display: none;
+                              }
+                              
+                              .hero h1 {
+                                                font-size: 2.5rem;
+                              }
+                              
+                              .hero-buttons {
+                                                flex-direction: column;
+                                                align-items: center;
+                              }
+                              
+                              .about-content {
+                                                grid-template-columns: 1fr;
+                                                gap: 2rem;
+                              }
+                              
+                              .services-grid {
+                                                grid-template-columns: 1fr;
+                              }
+                }
+            </style>
+</head>
+<body>
+      <!-- Header -->
+      <header>
+                <nav class="container">
+                              <a href="#" class="logo">JobNomad</a>a>
+                              <ul class="nav-menu">
+                                                <li><a href="index.html">Home</a>a></li>
+                                              <li><a href="services.html">Services</a>a></li>
+                                              <li><a href="about.html">About</a>a></li>
+                                              <li><a href="contact.html">Contact</a>a></li>
+                                              <li><a href="jobs.html">Jobs</a>a></li>
+                                              <li><a href="blog.html">Blog</a>a></li>
+                              </ul>ul>
+                            <a href="register.html" class="cta-button">Get Started</a>a>
+                </nav>nav>
+      </header>header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+            <div class="container">
+                        <h1>Welcome to JobNomad</h1>
+                        <p>The ultimate global marketplace connecting talented freelancers with businesses worldwide. Find your perfect opportunity or hire the best talent for your projects.</p>
+                        <div class="hero-buttons">
+                                        <a href="jobs.html" class="btn-primary">Browse Jobs</a>a>
+                                        <a href="register.html" class="btn-secondary">Hire Talent</a>a>
+                        </div>div>
+            </div>div>
+    </section>section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+            <div class="container">
+                        <h2 class="section-title">Our Services</h2>
+                        <div class="services-grid">
+                                        <div class="service-card">
+                                                            <div class="service-icon">��</div>div>
+                                                            <h3>Tech & Development</h3>
+                                                            <p>Web development, mobile apps, software engineering, and technical solutions from expert developers worldwide.</p>
+                                        </div>div>
+                                        <div class="service-card">
+                                                            <div class="service-icon">��</div>div>
+                                                            <h3>Digital Marketing</h3>
+                                                            <p>SEO, social media marketing, content creation, and advertising campaigns to grow your business online.</p>
+                                        </div>div>
+                                        <div class="service-card">
+                                                            <div class="service-icon">✍️</div>div>
+                                                            <h3>Writing & Translation</h3>
+                                                            <p>Content writing, copywriting, technical writing, and professional translation services in multiple languages.</p>
+                                        </div>div>
+                                        <div class="service-card">
+                                                            <div class="service-icon">��</div>div>
+                                                            <h3>Design & Creative</h3>
+                                                            <p>UI/UX design, graphic design, branding, logo creation, and creative solutions for your business needs.</p>
+                                        </div>div>
+                                        <div class="service-card">
+                                                            <div class="service-icon">��</div>div>
+                                                            <h3>Data & Analytics</h3>
+                                                            <p>Data analysis, machine learning, business intelligence, and insights to drive your business decisions.</p>
+                                        </div>div>
+                                        <div class="service-card">
+                                                            <div class="service-icon">��</div>div>
+                                                            <h3>Customer Support</h3>
+                                                            <p>Virtual assistance, customer service, call center support, and administrative services for your business.</p>
+                                        </div>div>
+                        </div>div>
+            </div>div>
+    </section>section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+            <div class="container">
+                        <div class="about-content">
+                                        <div class="about-text">
+                                                            <h2>About JobNomad</h2>
+                                                            <p>JobNomad is revolutionizing the way businesses and freelancers connect globally. Our platform bridges the gap between talented professionals and companies seeking exceptional services.</p>
+                                                            <p>Founded with the vision of creating a borderless workplace, we empower digital nomads and remote workers to find meaningful opportunities while helping businesses access top-tier talent from around the world.</p>
+                                                            <ul class="features-list">
+                                                                                    <li>Global talent network spanning 190+ countries</li>
+                                                                                    <li>Secure payment system with escrow protection</li>
+                                                                                    <li>24/7 customer support and dispute resolution</li>
+                                                                                    <li>Advanced matching algorithm for perfect fits</li>
+                                                                                    <li>Quality assurance and rating system</li>
+                                                                                    <li>Mobile-first platform for work on the go</li>
+                                                            </ul>ul>
+                                        </div>div>
+                                        <div class="about-image">
+                                                            <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 600;">
+                                                                                    �� Global Community
+                                                            </div>div>
+                                        </div>div>
+                        </div>div>
+            </div>div>
+    </section>section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+            <div class="container">
+                        <h2>Ready to Get Started?</h2>
+                        <p>Join thousands of successful freelancers and businesses who trust JobNomad for their remote work needs.</p>
+                        <div class="hero-buttons">
+                                        <a href="register.html" class="btn-primary">Sign Up as Freelancer</a>a>
+                                        <a href="register.html" class="btn-secondary">Post a Job</a>a>
+                        </div>div>
+            </div>div>
+    </section>section>
+
+    <!-- Footer -->
+    <footer>
+              <div class="container">
+                            <div class="footer-content">
+                                              <div class="footer-section">
+                                                                    <h3>For Freelancers</h3>
+                                                                    <a href="jobs.html">Find Jobs</a>a>
+                                                                    <a href="about.html">How it Works</a>a>
+                                                                    <a href="blog.html">Success Stories</a>a>
+                                                                    <a href="contact.html">Resources</a>a>
+                                              </div>div>
+                                              <div class="footer-section">
+                                                                    <h3>For Businesses</h3>
+                                                                    <a href="register.html">Hire Talent</a>a>
+                                                                    <a href="services.html">Enterprise Solutions</a>a>
+                                                                    <a href="contact.html">Pricing</a>a>
+                                                                    <a href="blog.html">Case Studies</a>a>
+                                              </div>div>
+                                              <div class="footer-section">
+                                                                    <h3>Support</h3>
+                                                                    <a href="contact.html">Help Center</a>a>
+                                                                    <a href="contact.html">Contact Us</a>a>
+                                                                    <a href="blog.html">Community</a>a>
+                                                                    <a href="privacy.html">Trust & Safety</a>a>
+                                              </div>div>
+                                              <div class="footer-section">
+                                                                    <h3>Company</h3>
+                                                                    <a href="about.html">About Us</a>a>
+                                                                    <a href="contact.html">Careers</a>a>
+                                                                    <a href="blog.html">Press</a>a>
+                                                                    <a href="privacy.html">Legal</a>a>
+                                              </div>div>
+                            </div>div>
+                            <div class="footer-bottom">
+                                              <p>&copy; 2024 JobNomad. All rights reserved. | <a href="privacy.html">Privacy Policy</a>a> | <a href="privacy.html">Terms of Service</a>a></p>
+                            </div>div>
+              </div>div>
+    </footer>
+
+      <script>
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                              anchor.addEventListener('click', function (e) {
+                                                e.preventDefault();
+                                                const target = document.querySelector(this.getAttribute('href'));
+                                                if (target) {
+                                                                      target.scrollIntoView({
+                                                                                                behavior: 'smooth',
+                                                                                                block: 'start'
+                                                                        });
+                                                }
+                              });
+                });
+
+                // Header background on scroll
+                window.addEventListener('scroll', function() {
+                              const header = document.querySelector('header');
+                              if (window.scrollY > 100) {
+                                                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                              } else {
+                                                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                              }
+                });
+
+                // Add loading animations
+                const observerOptions = {
+                              threshold: 0.1,
+                              rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver(function(entries) {
+                              entries.forEach(entry => {
+                                                if (entry.isIntersecting) {
+                                                                      entry.target.style.opacity = '1';
+                                                                      entry.target.style.transform = 'translateY(0)';
+                                                }
+                              });
+                }, observerOptions);
+
+                // Observe service cards
+                document.querySelectorAll('.service-card').forEach(card => {
+                              card.style.opacity = '0';
+                              card.style.transform = 'translateY(30px)';
+                              card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                              observer.observe(card);
+                });
+      </script>
+</body>
+</html>html>
+    </footer></p></li></li></p></p></h1></li></li><!DOCTYPE html>
+<html lang="en">
   <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
