@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - JobNomad | Global Freelance Marketplace Story</title>
+<meta name="description" content="Learn about JobNomad's mission to connect global freelancers with businesses worldwide. Our story, team, and commitment to borderless work.">
+<meta name="keywords" content="about jobnomad, freelance marketplace, remote work, digital nomads, global talent">
+<meta name="author" content="JobNomad">
+<meta name="robots" content="index, follow">
+    
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #667eea;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* About Sections */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-section.alt {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-placeholder {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        /* Mission & Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .team-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .team-role {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .values-grid, .team-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<nav class="container">
+<a href="index.html" class="logo">JobNomad</a>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="jobs.html">Jobs</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+<a href="register.html" class="cta-button">Get Started</a>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<div class="container">
+<h1>About JobNomad</h1>
+<p>Connecting global talent with worldwide opportunities. Building the future of borderless work.</p>
+</div>
+</section>
+
+<!-- Our Story -->
+<section class="about-section">
+<div class="container">
+<div class="about-content">
+<div class="about-text">
+<h2>Our Story</h2>
+<p>JobNomad was born from a simple belief: talent knows no borders. In an increasingly connected world, we saw the need for a platform that could seamlessly connect skilled professionals with businesses, regardless of geographical constraints.</p>
+<p>Founded in 2024, we've rapidly grown to become a trusted marketplace where innovation meets opportunity. Our platform empowers digital nomads, remote workers, and businesses to collaborate across continents.</p>
+<p>Today, we serve thousands of professionals and businesses across 190+ countries, facilitating meaningful work relationships that transcend traditional boundaries.</p>
+</div>
+<div class="about-image">
+<div class="about-placeholder">
+                        🌍 Global Network
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Mission & Values -->
+<section class="about-section alt">
+<div class="container">
+<h2 class="section-title">Our Mission & Values</h2>
+<div class="values-grid">
+<div class="value-card">
+<div class="value-icon">🎯</div>
+<h3>Global Accessibility</h3>
+<p>Making quality work opportunities accessible to everyone, everywhere.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">🤝</div>
+<h3>Trust & Transparency</h3>
+<p>Building relationships based on honest communication and reliable service delivery.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">⚡</div>
+<h3>Innovation</h3>
+<p>Continuously improving our platform with cutting-edge technology and user feedback.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">🌟</div>
+<h3>Quality Excellence</h3>
+<p>Maintaining the highest standards in both talent curation and project delivery.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">💪</div>
+<h3>Empowerment</h3>
+<p>Enabling professionals to build successful careers on their own terms.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">🔒</div>
+<h3>Security</h3>
+<p>Protecting our users with advanced security measures and secure payment systems.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Team Section -->
+<section class="about-section">
+<div class="container">
+<h2 class="section-title">Meet Our Team</h2>
+<div class="team-grid">
+<div class="team-card">
+<div class="team-avatar">JS</div>
+<h4>John Smith</h4>
+<div class="team-role">Founder & CEO</div>
+<p>Visionary leader with 10+ years in tech and marketplace development.</p>
+</div>
+<div class="team-card">
+<div class="team-avatar">MJ</div>
+<h4>Maria Johnson</h4>
+<div class="team-role">CTO</div>
+<p>Technology expert specializing in scalable platform architecture.</p>
+</div>
+<div class="team-card">
+<div class="team-avatar">DL</div>
+<h4>David Lee</h4>
+<div class="team-role">Head of Operations</div>
+<p>Operations specialist ensuring smooth platform performance globally.</p>
+</div>
+<div class="team-card">
+<div class="team-avatar">SB</div>
+<h4>Sarah Brown</h4>
+<div class="team-role">Head of Community</div>
+<p>Community builder fostering relationships between freelancers and clients.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+<div class="container">
+<h2 class="section-title">JobNomad by Numbers</h2>
+<div class="stats-grid">
+<div class="stat-item">
+<h3>50K+</h3>
+<p>Active Freelancers</p>
+</div>
+<div class="stat-item">
+<h3>15K+</h3>
+<p>Happy Clients</p>
+</div>
+<div class="stat-item">
+<h3>190+</h3>
+<p>Countries</p>
+</div>
+<div class="stat-item">
+<h3>99.5%</h3>
+<p>Success Rate</p>
+</div>
+<div class="stat-item">
+<h3>$2M+</h3>
+<p>Paid to Freelancers</p>
+</div>
+<div class="stat-item">
+<h3>24/7</h3>
+<p>Support Available</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>For Freelancers</h3>
+<a href="jobs.html">Find Jobs</a>
+<a href="about.html">How it Works</a>
+<a href="blog.html">Success Stories</a>
+<a href="contact.html">Resources</a>
+</div>
+<div class="footer-section">
+<h3>For Businesses</h3>
+<a href="register.html">Hire Talent</a>
+<a href="services.html">Enterprise Solutions</a>
+<a href="contact.html">Pricing</a>
+<a href="blog.html">Case Studies</a>
+</div>
+<div class="footer-section">
+<h3>Support</h3>
+<a href="contact.html">Help Center</a>
+<a href="contact.html">Contact Us</a>
+<a href="blog.html">Community</a>
+<a href="privacy.html">Trust & Safety</a>
+</div>
+<div class="footer-section">
+<h3>Company</h3>
+<a href="about.html">About Us</a>
+<a href="contact.html">Careers</a>
+<a href="blog.html">Press</a>
+<a href="privacy.html">Legal</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 JobNomad. All rights reserved. | <a href="privacy.html" style="color: #ccc;">Privacy Policy</a> | <a href="privacy.html" style="color: #ccc;">Terms of Service</a></p>
+</div>
+</div>
+</footer>
+</body>
+</html>
